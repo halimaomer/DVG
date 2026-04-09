@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+service RechnungService {
+
+  rpc SpeichereMetadaten (RechnungRequest) returns (RechnungResponse);
+}
+
+message RechnungRequest {
+  string rechnungs_nummer = 1;
+  string lieferant = 2;
+  double betrag = 3;
+  string waehrung = 4;
+  string datum = 5;
+  RechnungsStatus status = 6;
+}
+
+message RechnungResponse {
+  bool erfolg = 1;
+  string nachricht = 2;
+}
+
+enum RechnungsStatus {
+  OFFEN = 0;
+  BEZAHLT = 1;
+  ABGELEHNT = 2;
+}
