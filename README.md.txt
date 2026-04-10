@@ -11,12 +11,15 @@ Digitalisierung der Eingangsrechungsverarbeitung eines mittelständischen Untern
 
 ## Projektstruktur
 
-DVG-1
-client/               #Client: speichert Rechnungsdaten & veranlasst Zahlung
-invoice_metadata/     #gRPC Server: speichert Rechnungsdaten
-payment_system/       #Zahlungssystem: verarbeitet Zahlungsaufträge via RabbitMQ
-proto/                #Protobuf Definition
-docker-compose.yml    #RabbitMQ Contanier
+DVG-1/
+|---client/               # Client: speichert Rechnungsdaten & veranlasst Zahlung
+|---invoice_metadata/     # gRPC Server: speichert Rechnungsdaten
+|---payment_system/       # Zahlungssystem: verarbeitet Zahlungsaufträge via RabbitMQ
+|---proto/                # Protobuf Definition
+|---.gitignore            # Git Ausnahmen
+|---docker-compose.yml    # RabbitMQ Contanier
+|---README.md             # Projektdokumentation
+|---requirements.txt      # Python Abhängigkeiten
 
 
 ## Technologien
