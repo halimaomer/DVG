@@ -83,7 +83,7 @@ python -m client.client
 Ctrl + C
 ```
 
-***RabbitMq Contanier stoppen:*
+***RabbitMq Contanier stoppen:**
 ```
 bash/powershell
 docker-compose down
