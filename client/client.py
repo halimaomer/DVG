@@ -33,7 +33,7 @@ def run():
             )
             mq_channel = connection.channel()
             
-            mq_channel.queue_declare(queue='zahlungs_auftraege')
+            mq_channel.queue_declare(queue='zahlungs_auftraege', durable=True)
 
             zahlungs_daten = {
                 "rechnungs_nummer": request.rechnungs_nummer,
