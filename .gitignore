@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc 
+*.pyo 
+*.pyd 
+.Python 
+*.egg-info/ 
+dist/
+build/
+
+
+# Virtual Environment (Lokal auf Rechner)
+venv/
+.venv/
+env/
+
+# IDE Einstellung
+.vscode/
+.idea/
+
+
+# Umgebungsvariablen
+.env 
+
+# Docker
+*.log 
