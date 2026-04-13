@@ -24,10 +24,16 @@ def run():
         print(f"Erfolg: {response.erfolg}, Nachricht: {response.nachricht}")
         
         if response.erfolg:
-            connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+            credentials = pika.PlainCredentials("user", "password")
+            connection = pika.BlockingConnection(
+                pika.ConnectionParameters(
+                    host="localhost",
+                    credentials=credentials
+                )
+            )
             mq_channel = connection.channel()
             
-            mq_channel.queue_declare(queue='zahlungs_auftraege')
+            mq_channel.queue_declare(queue='zahlungs_auftraege', durable=True)
 
             zahlungs_daten = {
                 "rechnungs_nummer": request.rechnungs_nummer,
