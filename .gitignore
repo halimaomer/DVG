@@ -8,7 +8,6 @@ __pycache__/
 dist/
 build/
 
-
 # Virtual Environment (Lokal auf Rechner)
 venv/
 .venv/
@@ -17,7 +16,6 @@ env/
 # IDE Einstellung
 .vscode/
 .idea/
-
 
 # Umgebungsvariablen
 .env 
