@@ -24,7 +24,7 @@ DVG-1/
 
 ## Technologien
 - **gRPC** (Google Remote Procedure Call)- Kommunikation zwischen Client und Metadaten-Service
-- **RabbitMQ**  - Message Broker für Zahlungsaudträge
+- **RabbitMQ**  - Message Broker für Zahlungsaufträge
 - **Protobuf**  - Serialisierung der Nachrichten
 - **Docker**    - RabbitMQ läuft als Contanier
 
