@@ -3,13 +3,13 @@ import time
 import pika
 
 
-QUEUE_NAME = "zahlungsauftraege"
+QUEUE_NAME = "zahlungs_auftraege"
 
 
 def callback(ch, method, properties, body):
     try:
         zahlungsdaten = json.loads(body.decode("utf-8"))
-        rechnungsnr = zahlungsdaten.get("rechnungsnummer")
+        rechnungsnr = zahlungsdaten.get("rechnungs_nummer")
         betrag = zahlungsdaten.get("betrag")
         waehrung = zahlungsdaten.get("waehrung", "EUR")
 
